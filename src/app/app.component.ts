@@ -22,6 +22,7 @@ import { EncuestaService } from './services/encuesta.service';
 export class AppComponent implements OnInit{
   title = 'mashup-carta-oferta';
 
+  showFilters: boolean = false;
 
   constructor(private encuestaService: EncuestaService){}
 
@@ -37,6 +38,10 @@ export class AppComponent implements OnInit{
       console.log('err:',err)
     })
 
+  }
+
+  toggleSettings(){
+    this.showFilters = !this.showFilters;
   }
 
 
